@@ -1,0 +1,180 @@
+@charset "utf-8";
+/* CSS Document */
+html {
+	font-family: 'Abel', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1 {font-family: 'Questrial', sans-serif;
+}
+ul {
+	list-style: none;
+}
+ul li h3{font-size: 18px;
+}
+/*seccion barraN */
+.cabezote {
+	position:relative;
+	width: 100%;
+	background-color: #EC6A51;
+}
+.cabezote img {
+	position: relative;
+	width: 70px;	
+	margin: 0px;
+	display: block;
+}
+/*seccion menuG */
+.menuG ul,.menuG li{
+	margin: 0;
+	padding:0;
+}
+.menuG ul{
+	position: absolute;
+	top:0vw;
+	right: 1vw;
+	list-style: none;
+	width: 100%;
+	z-index: 10;
+}
+.menuG li{
+	float: right;
+	position: relative;
+
+}
+.menuG a{
+	color:black;
+	display: block;
+	margin: 0;
+	padding:1.1vh 2vw;
+	text-align: center;
+	text-decoration:none;
+	font-family: 'Abel', sans-serif;
+}
+.active{
+	background: white;
+}
+.menuG li:hover a{
+	background: black;
+	color: antiquewhite;
+}
+
+#submenu{
+	position: absolute;
+	top:0;
+	left: 0;
+	display: none;
+	float: left;
+}
+li:hover #submenu{
+	display: block;
+	top:70px;
+}
+#submenu li{
+	float: none;
+	width: 100%;
+}
+#submenu a:hover{
+	background:white;
+}
+#submenu a{
+	background:grey;
+}
+/*seccion home */
+#home div img{
+	width: 100%;
+	position:relative;
+	box-sizing: border-box;
+	display: block;
+	margin: auto;
+}
+.vint{
+	position: relative;
+	width: 100%;
+
+}
+.vintage{
+	position: absolute;
+	top:0vw;
+	box-sizing: border-box;
+	opacity: 1;
+	transition: .9s ease;
+}
+.vint:hover .vintage{
+	opacity: 0;
+}
+
+/*seccion QuienSoy */
+#quienSoy {
+	text-align: center;
+}
+.quien{
+	position:relative;
+	height: 70vh;
+	top: 25vh;
+	
+}
+#quienSoy p{
+	text-align: justify;
+	padding: 0 20vw;
+}
+
+/*seccion formulario */
+#formulario{
+	background-color: whitesmoke;
+}
+fieldset {
+	width: 60vw;
+}
+textarea{
+	width: 40vw;
+	height: 20vh;
+}
+
+/*seccion fotos */
+#fotos{
+	width: 50vw;
+}
+
+/*seccion  temporadas*/
+#temporadas{
+	overflow: auto;
+	background-color: rgba(0,116,116,0.56);
+	padding-top:10vh;
+	padding-bottom:5vh;
+	
+}
+#temporadas div{
+	float: left;
+	text-align: center;
+	margin: 0vw 5vw;
+}
+.avatar {
+	box-sizing: border-box;
+	width: 14vw;
+	border:solid 0.3vw white;
+	border-radius: 50%;
+	
+	/*transicion*/
+	transition:transform .5s;
+}
+.avatar:hover {
+	transform: scale(1.3);
+  	cursor:pointer;
+}
+
+/*seccion  footer*/
+footer {
+	width: 100%;
+	background-color: #0D0E0A;
+}
+
+footer h5{
+	color: antiquewhite;
+}
+.fab {
+	font-size: 3vw;
+	color: antiquewhite;
+	padding: 1vw;
+}
