@@ -178,3 +178,103 @@ footer h5{
 	color: antiquewhite;
 	padding: 1vw;
 }
+
+/*TEMPORADAS*/
+
+
+:root { --separa: 4px; }
+* { 
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+
+.titulo { text-align: center; margin: 2em; }
+main {
+  max-width: 800px;
+  width: 98%;
+  min-height: 96vh;
+  margin: 2vh auto;
+}
+.galeria {
+  max-width       : 100%;
+  line-height     : 0;
+  padding         : var(--separa);
+  padding-right   : 0;
+  display         : flex;
+  flex-wrap       : wrap;
+  justify-content : space-around;
+}
+.item {
+  padding: var(--separa);
+  width: 45vh;
+}
+.item img {
+  max-width : 100%;
+  height    : auto;
+  opacity   : 1;
+  outline   : 3px solid #fff;
+}
+.item img:hover {
+  opacity : 0.8;
+  cursor  : pointer;
+}
+.modal {
+  display: none;
+}
+.modal:target {
+  display          : block;
+  position         : fixed;
+  top              : 0;
+  left             : 0;
+  width            : 100vw;
+  height           : 100%;
+  display          : flex;
+  background-color : rgba(0,0,0,0.6);
+}
+.imagen {
+  margin          : auto;
+  width           : 100%;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+}
+@keyframes zoom {
+  0%   { opacity: 0.2; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1);}
+}
+.imagen a { margin: 0 4px; }
+.imagen img {
+  max-width : 100%;
+  width     : 80vw;
+  height    : auto;
+  border    : 8px solid #fff;
+  animation : zoom 0.5s ease-in-out;
+  position  : relative;
+}
+.imagen a:nth-child(2)::after {
+  content       : "X";
+  width         : 40px; height: 40px;
+  line-height   : 40px;
+  text-align    : center;
+  font-size     : 2em;
+  border-radius : 50%;
+  border        : 2px solid hsla(0, 0%, 0%, 0.3);
+  background    : hsla(0, 0%, 0%, 0.5);
+  color         : hsla(0, 100%, 50%, 0.5);
+  position      : absolute;
+  top           : 2vh;left: 2vw;
+  z-index       : 1;
+}
+.imagen a:nth-child(2) {
+  margin : 0;
+  height : 100%;
+}
+.ant,.sig {
+  width  : 0px; height: 0px;
+  border : 20px solid transparent;
+}
+.ant { border-right: 20px solid hsla(0, 100%, 100%, 0.8); }
+.sig { border-left: 20px solid hsla(0, 100%, 100%, 0.8); }
+.ant:hover { border-right: 20px solid hsla(0, 100%, 50%, 0.8); }
+.sig:hover { border-left: 20px solid hsla(0, 100%, 50%, 0.8); }
